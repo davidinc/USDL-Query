@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <link type="text/css" href="css/blitzer/jquery-ui-1.8.5.custom.css" rel="stylesheet" />	
+    <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
+    <script type="text/javascript" src="js/usdlquery.js"></script>
+    <script type="text/javascript">
+        function load() {
+          var finput = document.getElementById("usdlfile");
+
+          var f = finput.files[0];
+          if (f) {
+            var r = new FileReader();
+            r.onload = function(e) { 
+              display(e.target.result,$('#content'));
+            }
+            r.readAsText(f);
+          } else { alert("Failed to load file"); }
+        }
+
+        function loadButton(file) {
+             $.ajax({ url: file, success: function(data){ display(data,$('#shootingarea'));}});
+        }
+
+        $(function() {
+          $( "#usdlout" ).dialog({
+            width: 600,
+            height: 500,
+            resizable: false,
+            dragable: false,
+            autoOpen: false,
+            show: "blind",
+            hide: "explode"
+	  });
+	  $( "button" ).button();
+	  $( ".tb" ).click(function() { loadButton($(this).attr("file")); });
+          $( "#showusdl" ).click(function() { $("#usdlout").empty().append(render(shootingarea).replace(/</g,"&#60;").replace(/>/g,"&#62<br/>")).dialog( "open" ); });
+          $( "#downusdl" ).click(function() { alert("not supported yet"); });
+	});
+
+
+    </script>
+    <style type="text/css">
+        .funcmenu {
+          float:left;
+          margin-right:20px;
+        }
+        #funcread {
+          margin-left:80px;
+        }
+    </style>
+  </head>
+  <body>
+<div id="usdlout"></div>
+
+
+    <h3>USDL Tester</h3>
+
+    <div class="funcmenu">Select a file:</div>
+    <div class="funcmenu">
+      <button class="tb" file="test/test1.usdl">test1</button>
+      <button class="tb" file="test/test2.usdl">test2</button>
+      <button class="tb" file="test/test3.usdl">test3</button>
+    </div>
+    <div class="funcmenu">
+      <input type="file" id="usdlfile" onChange="load($('#usdlfile').val())"/>
+      <a href="#" onclick="load($('#usdlfile'))">Load</a>
+    </div>
+    <div class="funcmenu" id="funcread">
+      <button id="showusdl">show USDL</button>
+      <button id="downusdl">download USDL</button>
+    </div>
+    
+
+
+    <div id="shootingarea"></div>
+  </body>
+</html>
+

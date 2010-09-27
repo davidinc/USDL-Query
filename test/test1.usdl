@@ -1,0 +1,8 @@
+<service>
+  <guid>P05529-RSM-DL006</guid>
+  <namespace>http://www.moonbank.com/BankingServicesNetwork/<namespace>
+  <name>Term Deposit</name>
+  <version>2.3.11</version>
+  <publicationTime>2009-11-20T01:37:26.000-0600</publicationTime>
+  <languages>ENG</languages>
+</service>
