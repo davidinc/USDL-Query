@@ -4,12 +4,12 @@ function display(usdlData,div,editable,callback) {
     return;
   }
   div.empty();
+
+	var content = usdlData.find('guid').text();
+
+	div.append(content);
 }
 
 function render(div) {
   return "<xml>yippi</xml>"
-}
-
-function service() {
- function 
 }

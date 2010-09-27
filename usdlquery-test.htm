@@ -19,7 +19,7 @@
         }
 
         function loadButton(file) {
-             $.ajax({ url: file, success: function(data){ display(data,$('#shootingarea'));}});
+             $.ajax({ url: file, success: function(data){ display($(data),$('#shootingarea'),true,null);}});
         }
 
         $(function() {
@@ -47,6 +47,10 @@
         }
         #funcread {
           margin-left:80px;
+           float:none;
+        }
+        #shootingarea {
+	  margin-top: 50px;
         }
     </style>
   </head>
