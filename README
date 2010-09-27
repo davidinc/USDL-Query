@@ -1,0 +1,11 @@
+The Unified Service Description Language (USDL) defines a way to describe services from a business
+and operational point of view and align this with the technical perspective. While the latter is
+captured quite well by existing service description languages, USDL explicitly enables to express
+business characteristics set by an organization for the purpose of providing means for consumers to
+invoke and use business services and for intermediaries to (re)use and repurpose services. A detailed
+explanation of the scope and objectives of USDL is given in “USDL Technical Overview Paper”.
+
+Integrating USDL with JQuery allows us to use all of the methods in this Java Script library manipulate the
+DOM in some manner. A few of them simply change one of the attributes of an element. This provides abstractions 
+for low-level interaction and animation, advanced effects and high-level, themeable widgets, built on top of the 
+jQuery JavaScript Library, that allow us to build highly interactive web applications.
