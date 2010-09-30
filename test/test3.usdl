@@ -1,0 +1,12 @@
+		#guid {
+        margin-top:20px;
+        }
+        #namespace {
+        margin-top: 30px;
+        }
+        #name {
+        margin-top: 40px;
+        }
+    <div id='guid'>Guid: </div>
+    <div id='namespace'>NameSpace: </div>
+    <div id='name'>Name:</div>

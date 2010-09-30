@@ -1,0 +1,48 @@
+	
+	#shootingarea {
+		margin-top: 80px;
+		border: "3px solid red";
+		position:relative;
+		width:970px;
+		height: 902px;
+		background-color: white;
+	}
+	#content {
+		margin: 0;
+		padding: 8px 10px 0 290px;
+		font-family: Arial, "Times New Roman", Times, serif;
+		font-size: 39px;
+		color: black;
+		background-color: red;
+	}
+	#block{
+		display: block;
+		margin: 0;
+		padding: 18px 30px 0 30px;
+		font-family: Arial, "Times New Roman", Times, serif;
+	}
+	#guid {
+	
+		height: inherit !important;
+	    width: inherit !important;
+		background-color:#e1e7c4;
+	}
+	#namesp {
+		height: inherit !important;
+	    width: inherit !important;
+		background-color:#e1e7c4;
+	}	
+	#name {
+		height: 20px;
+	    width: inherit !important;
+		background-color:#e1e7c4;
+	}
+	.a	{
+		background-color:white;
+	}
+	.b	{
+		background-color:white;
+	}
+	.c	{
+		background-color:white;
+	}
